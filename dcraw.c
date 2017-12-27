@@ -32,6 +32,7 @@
 #ifdef WIN32
 #define _CRT_SECURE_NO_DEPRECATE_
 //#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_NONSTDC_NO_WARNINGS
 #define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_ = 1
 #pragma warning(disable:4018)
 #pragma warning(disable:4244)
