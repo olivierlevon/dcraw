@@ -1,0 +1,7 @@
+version: 9.2.7r1.477b{build}
+image: Visual Studio 2017
+configuration: Release
+platform: x86
+build:
+  project: dcraw.vcxproj
+  verbosity: minimal

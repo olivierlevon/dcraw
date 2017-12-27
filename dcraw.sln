@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dcraw", "dcraw.vcxproj", "{9F48B78B-B617-4FC1-8AF1-A1E966813242}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F48B78B-B617-4FC1-8AF1-A1E966813242}.Debug|x86.ActiveCfg = Release|Win32
+		{9F48B78B-B617-4FC1-8AF1-A1E966813242}.Debug|x86.Build.0 = Release|Win32
+		{9F48B78B-B617-4FC1-8AF1-A1E966813242}.Release|x86.ActiveCfg = Release|Win32
+		{9F48B78B-B617-4FC1-8AF1-A1E966813242}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD3E5268-4620-4F28-BB50-D0B58E172A8C}
+	EndGlobalSection
+EndGlobal

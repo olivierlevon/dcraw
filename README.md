@@ -14,3 +14,21 @@ https://www.cybercom.net/~dcoffin/dcraw/dcraw.c
    
 
 Version 9.27 Revision 1.477  Date: 2016/05/10
+
+
+www.cybercom.net/~dcoffin/dcraw/
+
+
+
+
+	    
+dcraw windows native 32 bits build by Olivier Levon, LCMS JPEG ImageMagick support included
+	    
+http://www.imagemagick.org/discourse-server/viewtopic.php?f=3&t=11183
+
+
+
+
+Requirements
+
+Visual C++ 2017 redistributables

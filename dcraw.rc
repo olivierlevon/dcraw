@@ -1,0 +1,43 @@
+#include <winver.h>
+
+
+LANGUAGE 0x09,0x01
+
+1 VERSIONINFO
+  FILEVERSION 9,2,7,0
+  PRODUCTVERSION 1,4,7,7
+  FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+  FILEFLAGS VS_FF_DEBUG
+#else
+  FILEFLAGS 0x00L
+#endif
+  FILEOS VOS_NT_WINDOWS32
+  FILETYPE VFT_APP
+  FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+	BLOCK "040904b0"
+	BEGIN
+	    // Required:	    
+	    VALUE "CompanyName", "www.cybercom.net/~dcoffin/dcraw/\0"
+	    VALUE "FileDescription", "This is a command-line ANSI C program to convert raw photos from any digital camera on any computer running any operating system.\0"
+	    VALUE "FileVersion", "9.27\0"
+	    VALUE "InternalName", "dcraw\0"
+	    VALUE "OriginalFilename", "dcraw.exe\0"
+	    VALUE "ProductName", "dcraw\0"
+	    VALUE "ProductVersion", "9.27 Revision: 1.474\0"
+	    // Optional:
+	    VALUE "Comments", "dcraw windows native 32 bits build by Olivier Levon\0" //, LCMS / JPEG / Jasper / ImageMagick support included
+	    VALUE "LegalCopyright", "Copyright © 1997-2016 by Dave Coffin, dcoffin a cybercom o net.\0"
+	    VALUE "LegalTrademarks", "\0"
+	    //VALUE "PrivateBuild", "\0"
+	    //VALUE "SpecialBuild", "\0"
+	END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 0x4b0
+    END
+END

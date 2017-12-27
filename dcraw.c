@@ -29,6 +29,15 @@
 #define _GNU_SOURCE
 #endif
 #define _USE_MATH_DEFINES
+#ifdef WIN32
+#define _CRT_SECURE_NO_DEPRECATE_
+//#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_ = 1
+#pragma warning(disable:4018)
+#pragma warning(disable:4244)
+#pragma warning(disable:4305)
+#pragma warning(disable:4996)
+#endif
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
@@ -46,18 +55,25 @@
 #define fseeko fseek
 #define ftello ftell
 #else
+#ifdef WIN32
+#define fseeko _fseeki64
+#define ftello _ftelli64
+#else
 #define fgetc getc_unlocked
+#endif
 #endif
 #ifdef __CYGWIN__
 #include <io.h>
 #endif
 #ifdef WIN32
+#include <io.h>
+#include <direct.h>
 #include <sys/utime.h>
 #include <winsock2.h>
 #pragma comment(lib, "ws2_32.lib")
 #define snprintf _snprintf
 #define strcasecmp stricmp
-#define strncasecmp strnicmp
+#define strncasecmp _strnicmp
 typedef __int64 INT64;
 typedef unsigned __int64 UINT64;
 #else
@@ -9843,6 +9859,7 @@ int CLASS main (int argc, const char **argv)
   int user_qual=-1, user_black=-1, user_sat=-1, user_flip=-1;
   int use_fuji_rotate=1, write_to_stdout=0, read_from_stdin=0;
   const char *sp, *bpfile=0, *dark_frame=0, *write_ext;
+  const char *outfile= 0;  
   char opm, opt, *ofname, *cp;
   struct utimbuf ut;
 #ifndef NO_LCMS
@@ -9876,6 +9893,7 @@ int CLASS main (int argc, const char **argv)
     puts(_("+M/-M     Use/don't use an embedded color matrix"));
     puts(_("-C <r b>  Correct chromatic aberration"));
     puts(_("-P <file> Fix the dead pixels listed in this file"));
+    puts(_("-O <fich> Output file (option added via patch for ImageMagick)"));    
     puts(_("-K <file> Subtract dark frame (16-bit raw PGM)"));
     puts(_("-k <num>  Set the darkness level"));
     puts(_("-S <num>  Set the saturation level"));
@@ -9943,6 +9961,7 @@ int CLASS main (int argc, const char **argv)
 #endif
 	break;
       case 'P':  bpfile     = argv[arg++];  break;
+      case 'O':  outfile    = argv[arg++];  break;      
       case 'K':  dark_frame = argv[arg++];  break;
       case 'z':  timestamp_only    = 1;  break;
       case 'e':  thumbnail_only    = 1;  break;
@@ -10226,7 +10245,11 @@ thumbnail:
     if (write_to_stdout)
       strcpy (ofname,_("standard output"));
     else {
-      strcpy (ofname, ifname);
+      if (outfile)
+        strcpy (ofname, outfile);
+      else {
+        strcpy (ofname, ifname);
+      }
       if ((cp = strrchr (ofname, '.'))) *cp = 0;
       if (multi_out)
 	sprintf (ofname+strlen(ofname), "_%0*d",
