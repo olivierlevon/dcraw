@@ -22,7 +22,7 @@ www.cybercom.net/~dcoffin/dcraw/
 
 
 	    
-dcraw windows native 32 bits build by Olivier Levon, LCMS JPEG ImageMagick support included
+dcraw windows native 32 bits build by Olivier Levon, JPEG / LCMS / Jasper support included and patch for use with ImageMagick 
 	    
 http://www.imagemagick.org/discourse-server/viewtopic.php?f=3&t=11183
 
@@ -31,4 +31,12 @@ http://www.imagemagick.org/discourse-server/viewtopic.php?f=3&t=11183
 
 Requirements
 
-Visual C++ 2017 redistributables
+Redistributable Microsoft Visual C++ for Visual Studio 2017 freely available from here: 
+
+https://www.visualstudio.com/downloads/ (bottom of the page)
+
+or direct links :
+
+X64 https://go.microsoft.com/fwlink/?LinkId=746572
+
+x86 https://go.microsoft.com/fwlink/?LinkId=746571

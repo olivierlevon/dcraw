@@ -27,7 +27,7 @@ BEGIN
 	    VALUE "InternalName", "dcraw\0"
 	    VALUE "OriginalFilename", "dcraw.exe\0"
 	    VALUE "ProductName", "dcraw\0"
-	    VALUE "ProductVersion", "9.27 Revision: 1.474\0"
+	    VALUE "ProductVersion", "9.27 Revision: 1.477\0"
 	    // Optional:
 	    VALUE "Comments", "dcraw windows native 32 bits build by Olivier Levon\0" //, LCMS / JPEG / Jasper / ImageMagick support included
 	    VALUE "LegalCopyright", "Copyright © 1997-2016 by Dave Coffin, dcoffin a cybercom o net.\0"
