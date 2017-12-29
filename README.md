@@ -1,8 +1,9 @@
-# dcraw
+dcraw
+=====
 
 Dcraw native builds for Windows OS 
 
-https://www.cybercom.net/~dcoffin/dcraw/dcraw.c
+[dcraw C source code](https://www.cybercom.net/~dcoffin/dcraw/dcraw.c)
 
 
    dcraw.c -- Dave Coffin's raw photo decoder
@@ -16,20 +17,20 @@ https://www.cybercom.net/~dcoffin/dcraw/dcraw.c
 Version 9.27 Revision 1.477  Date: 2016/05/10
 
 
-www.cybercom.net/~dcoffin/dcraw/
+http://www.cybercom.net/~dcoffin/dcraw/
 
 
 
-
+## Features
 	    
-dcraw windows native 32 bits build by Olivier Levon, JPEG / LCMS / Jasper support included and patch for use with ImageMagick 
+dcraw windows native 32 bits build by Olivier Levon, JPEG / LCMS / Jasper support included and patch for use with [ImageMagick]
 	    
 http://www.imagemagick.org/discourse-server/viewtopic.php?f=3&t=11183
 
 
 
 
-Requirements
+## Requirements
 
 Redistributable Microsoft Visual C++ for Visual Studio 2017 freely available from here: 
 
